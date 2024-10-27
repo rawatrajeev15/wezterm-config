@@ -10,9 +10,9 @@ return {
       {
          name = 'WSL:Ubuntu',
          distribution = 'Ubuntu',
-         username = 'kevin',
-         default_cwd = '/home/kevin',
-         default_prog = { 'fish', '-l' },
+         username = 'rsingh',
+         default_cwd = '/home/rsingh',
+         default_prog = { 'zsh', '-l' },
       },
    },
 }

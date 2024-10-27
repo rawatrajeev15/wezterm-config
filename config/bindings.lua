@@ -47,7 +47,20 @@ local keys = {
          end),
       }),
    },
-
+   -- Toggle Fullscreen with Ctrl+Shift+F
+   {
+   key = 'F',
+   mods = 'CTRL|SHIFT',
+   action = wezterm.action.ToggleFullScreen,
+   },
+   
+   -- Optional: Close WezTerm with Ctrl+Shift+Q
+   {
+   key = 'Q',
+   mods = 'CTRL|SHIFT',
+   action = wezterm.action.QuitApplication,
+   },
+   
    -- cursor movement --
    { key = 'LeftArrow',  mods = mod.SUPER,     action = act.SendString '\x1bOH' },
    { key = 'RightArrow', mods = mod.SUPER,     action = act.SendString '\x1bOF' },
@@ -56,6 +69,9 @@ local keys = {
    -- copy/paste --
    { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
    { key = 'v',          mods = 'CTRL|SHIFT',  action = act.PasteFrom('Clipboard') },
+   { key = 'Insert',          mods = 'CTRL',  action = act.CopyTo('Clipboard') },
+   { key = 'Insert',          mods = 'SHIFT',  action = act.PasteFrom('Clipboard') },
+
 
    -- tabs --
    -- tabs: spawn+close

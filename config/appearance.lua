@@ -11,6 +11,7 @@ return {
 
    -- color scheme
    colors = colors,
+   window_decorations = 'NONE',
 
    -- background
    background = {
